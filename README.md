@@ -250,7 +250,7 @@ Reducing the 2D equations to steady simple shear of a layer of thickness $H$ she
 $$
 \frac{k}{\eta_f}\,\frac{d^2 p_\mathrm{eff}}{dy^2} = \frac{p_\mathrm{eff}}{\eta_\phi(1-\phi)},
 \qquad
-\boxed{\;\ell_p = \sqrt{\dfrac{k\,\eta_\phi(1-\phi)}{\eta_f}}\;}
+\boxed{\ell_p = \sqrt{\dfrac{k\,\eta_\phi(1-\phi)}{\eta_f}}}
 $$
 
 <p align="center"><img src="figures/png/figure3.png" alt="1D steady-state Couette reduction" width="75%"></p>
