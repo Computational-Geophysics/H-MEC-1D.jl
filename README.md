@@ -107,7 +107,11 @@ $$
 
 with $\rho_t = (1-\phi)\rho_s + \phi\rho_f$ the bulk density, $\phi$ porosity, and $v^s$ the solid velocity.
 
-**(ii) Darcy's law** for the fluid (Darcy flux $v_D = \phi(v^{f} - v^{s})$):
+**(ii) Darcy's law** for the fluid, with Darcy flux:
+
+$$
+v_D = \phi\left(v^f - v^s\right)
+$$
 
 $$
 v_D = -\frac{k(\phi)}{\eta_f}\left(\nabla p_f - \rho_f\,g\right).
