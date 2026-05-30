@@ -107,7 +107,7 @@ $$
 
 with $\rho_t = (1-\phi)\rho_s + \phi\rho_f$ the bulk density, $\phi$ porosity, and $v^s$ the solid velocity.
 
-**(ii) Darcy's law** for the fluid (Darcy flux $v_D = \phi(v^f - v^s)$):
+**(ii) Darcy's law** for the fluid (Darcy flux $v_D = \phi(v^{f} - v^{s})$):
 
 $$
 v_D = -\frac{k(\phi)}{\eta_f}\left(\nabla p_f - \rho_f\,g\right).
@@ -155,11 +155,18 @@ The constitutive law is the single modeling choice that decides whether dynamic 
 const rheology = :rate_and_state      # or  :rate_strengthening
 ```
 
-**1. Rate-and-state friction (`:rate_and_state`) — the surface law, embedded.**
+**1. Rate-and-state friction (`:rate_and_state`) — the surface law, embedded.**  
 The regularized (Lapusta et al., 2000) Dieterich–Ruina form
 
 $$
-\tau = a\,p_\mathrm{eff}\,\operatorname{arcsinh}\!\left[\frac{V}{2V_0}\exp\!\left(\frac{\mu_0 + b\ln(V_0\theta/L)}{a}\right)\right],
+\tau =
+a\,p_\mathrm{eff}\,
+\sinh^{-1}\!\left[
+\frac{V}{2V_0}
+\exp\!\left(
+\frac{\mu_0 + b\ln(V_0\theta/L)}{a}
+\right)
+\right]
 $$
 
 with aging-law state evolution $\dot\theta = 1 - V\theta/L$. In the continuum it is applied through a Drucker–Prager yield criterion with the slip rate replaced by the plastic strain-rate invariant, $V \to 2\,\dot\varepsilon'_{II,p}\,w$. **This law contains no spatial diffusion operator, so the band collapses onto whichever cell weakens first** — the thickness simply tracks $\Delta y_\min$ (Fig. 4). The dynamic time step uses the Lapusta–Liu (2009) quasi-static stiffness criterion.
