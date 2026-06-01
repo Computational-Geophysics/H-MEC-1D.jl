@@ -71,7 +71,7 @@ H-MEC-1D.jl/
 │ ├── plot_eps_pf_snapshots.jl # Strain-rate & fluid-pressure profiles (Figs. 4c,d / 5c,d)
 │ └── plot_couette_results.jl # τ(V), width(V), internal profiles (Fig. 6)
 ├── figures/
-│ ├── figure1.pdf … figure8.pdf # Vector figures from the manuscript
+│ ├── figure1.pdf … figure9.pdf # Vector figures from the manuscript
 │ └── png/ # Raster previews used in this README
 ├── results/ # Shared I/O directory (created at run time)
 ├── Project.toml # Julia environment / dependencies
@@ -340,6 +340,14 @@ The steady $\tau(V)$ curve is U-shaped (rate-strengthening → fluid-pressurizat
 $\sigma(k)=-Dk^2+W$ changes sign at $k_c$; $\ell_c$ is independent of storativity $S$ while $W\propto1/S$; $\ell_c\propto\sqrt{\eta_\phi}$; the instability exists wherever $\Lambda_w>0$.
 
 <p align="center"><img src="figures/png/figure7.png" alt="LSA dispersion analysis" width="80%"></p>
+
+### Physical mechanism of dynamic localization in fluid-saturated fault zones (Fig. 9)
+
+Earthquake rupture localizes deformation into a dynamically evolving fluid-saturated shear band whose thickness is controlled by the competition between effective-stress weakening and pore-fluid diffusion.
+
+<p align="center"><img src="figures/png/figure9.png" alt="Strain localization and dynamic rupture" width="80%"></p>
+
+An earthquake rupture propagates along a fault interface (red), radiating seismic waves outward from the rupture front. Beneath the fault, the active shear zone (colored band) represents the localized deformation core, whose width is selected by the balance between pore-fluid diffusion and effective-stress weakening. The family of profiles on the left shows the slip-rate distribution across the fault zone for increasing maximum slip rate $V_{\rm max}$, from creep and slow slip ($\log_{10}V_{\rm max}\approx-7$) to dynamic rupture ($\log_{10}V_{\rm max}\approx-2$), illustrating progressive narrowing of the shear band by several orders of magnitude as rupture accelerates. The inset (top right) shows the coupled stress and pore-fluid pressure cycle experienced by a material point swept by the rupture front. These processes dynamically generate the millimeter-to-centimeter principal slip zones observed in exhumed faults.
 
 ---
 
